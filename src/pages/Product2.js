@@ -8,18 +8,14 @@ export default function Product2() {
 
   return (
     <div className="product-wrapper">
-
-            
-    <div className="product-background"></div>
-    <img src="/images/product2.png" alt="배경" className="main-background" />
-
-
-      <div className="popup-box">
-        {/* <h3>비욘드 엔젤아쿠아 수분 진정 토너<br />500ml (비건)</h3>
-        <img src="/images/product-blue.png" alt="토너" className="popup-img" />
-        <p className="price-line">결제금액 합계 <span>10,900원</span></p>
-        <p>구매가 완료되었습니다.</p> */}
-        <button onClick={() => navigate('/main')}>확인</button>
+      <div className="overlay"/>
+      <img src="/images/main.png" alt="배경" className="product-bg" />
+      <div className="popup">
+        <button className="close-btn" onClick={() => navigate('/main')}>×</button>
+        <img src="/images/product2.png" alt="팝업" className="popup-img" />
+        <div className="popup-buttons">
+          <button className="confirm-btn2" onClick={() => navigate('/main')}>확인</button>
+        </div>
       </div>
     </div>
   );

@@ -9,44 +9,48 @@
 .login-bg {
   width: 100%;
   display: block;
+  object-fit: cover;
 }
 
 .login-box {
   position: absolute;
-  top: 260px; /* 조정 가능 */
-  left: 50%;
+  top: 240px;
+  left: 49%;
   transform: translateX(-50%);
-  width: 360px;
-  background-color: rgba(255, 255, 255, 0.9);
-  padding: 24px;
-  border-radius: 12px;
-  box-shadow: 0 0 8px rgba(0,0,0,0.1);
-}
-
-.login-box h2 {
-  text-align: center;
-  margin-bottom: 16px;
+  width: 278px;
+  padding: 10px;
+  background-color: transparent;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .login-box input {
-  width: 100%;
-  padding: 10px;
-  margin: 8px 0;
-  font-size: 16px;
+  width: 101%;
+  padding: 12px;
+  margin-bottom: 0px;
+  font-size: 14px;
+  border: 1px solid #ccc;
+  border-radius: 2px;
 }
 
 .login-box button {
-  width: 100%;
-  background-color: #00c73c;
+  width: 109%;
+  /* background-color: #00c73c; */
+  background-color:black;
   color: white;
-  padding: 10px;
-  font-size: 16px;
+  padding: 11px;
+  font-size: 14px;
+  font-weight: bold;
   border: none;
   border-radius: 6px;
-  margin-top: 10px;
+  margin-top: 90px;
+  margin-left: 4px;
   cursor: pointer;
+  transition: background-color 0.2s;
 }
 
 .login-box button:hover {
-  background-color: #00b336;
+  /* background-color: #00b336; */
+  background-color: rgb(20, 20, 20);
 }
