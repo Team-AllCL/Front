@@ -1,3 +1,4 @@
+
 .main-wrapper {
     max-width: 1440px;
     margin: 0 auto;
@@ -38,43 +39,10 @@
     background: transparent;
     transition: transform 0.2s;
   }
-  
-  /* .product-card:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
-  } */
-  
-  /* .product-card img {
-    width: 100%;
-    border-radius: 6px;
-  }
-  
-  .product-card .name {
-    margin: 10px 0 5px;
-    font-size: 15px;
-    line-height: 1.4;
-  }
-  
-  .product-card .price {
-    color: #e60023;
-    font-weight: bold;
-  } */
-  
-/*    
-  .festa-banner {
-    position: absolute;
-    top: 138px;
-    left: 888px;
-    transform: translateX(-50%);
-    z-index: 10;
-    width: 350px;
-  } */
 
   .festa-banner {
     position: absolute;
-    top: 138px;
-    left: 888px;
-    transform: translateX(-50%);
-    z-index: 10;
-    width: 350px;
+    top: 127px; /* 화면 세로 정중앙 */
+    left: 20px; /* 화면 가로 정중앙 */
+    width: 1500px; /* 크기 확대 (원하는 사이즈로 조정 가능) */
   }
