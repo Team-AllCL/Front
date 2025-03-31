@@ -1,3 +1,4 @@
+
 import React from 'react';
 import '../styles/main.css';
 import { useNavigate } from 'react-router-dom';
@@ -14,10 +15,8 @@ export default function Main() {
       </div>
 
       <div className="product-section">
-        <div className="product-grid">
-          <div className="product-card" onClick={() => navigate('/product')}>
-            <p className="purchase"><strong>바로구매</strong></p>
-          </div>
+        {/* ✅ 첫 번째 상품 클릭 시 product 페이지로 이동 */}
+        <div className="product-card" onClick={() => navigate('/product')}>
         </div>
       </div>
     </div>
