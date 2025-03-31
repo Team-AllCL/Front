@@ -25,25 +25,26 @@
     flex-wrap: wrap;
     padding: 0 20px 40px;
   }
-  
-  /* .product-card {
+
+  /* 파란 토너 상품링크 */
+  .product-card { 
     position: relative;
-    width: 227px;
-    border: 1px solid #eee;
-    border-radius: 8px;
-    text-align: center;
     cursor: pointer;
-    padding: 12px;
-    background: #fff;
+    top: -356px;
+    left: 312px;
+    width: 170px;
+    height: 208px;
+    /* background: #ff5757; */
+    background: transparent;
     transition: transform 0.2s;
   }
   
-  .product-card:hover {
+  /* .product-card:hover {
     transform: translateY(-5px);
     box-shadow: 0 4px 10px rgba(0,0,0,0.1);
-  }
+  } */
   
-  .product-card img {
+  /* .product-card img {
     width: 100%;
     border-radius: 6px;
   }
@@ -57,27 +58,23 @@
   .product-card .price {
     color: #e60023;
     font-weight: bold;
-  }
-   */
+  } */
+  
+/*    
   .festa-banner {
     position: absolute;
-    top: 142px; /* 원하는 위치로 조정 가능 */
-    left: 58%;
+    top: 138px;
+    left: 888px;
     transform: translateX(-50%);
     z-index: 10;
-    width: 350px; /* 필요에 따라 크기 조정 */
-  }
-  
-  .purchase{
+    width: 350px;
+  } */
+
+  .festa-banner {
     position: absolute;
-    top: 82%; /* 원하는 위치에 조정 */
-    left: 28%;
+    top: 138px;
+    left: 888px;
     transform: translateX(-50%);
-    background-color: #ff5757;
-    color: white;
-    padding: 8px 16px;
-    border-radius: 6px;
-    border: none;
-    cursor: pointer;
     z-index: 10;
-}
+    width: 350px;
+  }
