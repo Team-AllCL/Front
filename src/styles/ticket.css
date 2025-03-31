@@ -14,7 +14,7 @@
 }
 
 /* 구매 버튼 */
-.buy-btn {
+.ticket-buy-btn {
   position: absolute;
   bottom: 44px;
   left: 50%;
@@ -63,7 +63,7 @@
 }
 
 /* 팝업 이미지 */
-.popup-img {
+.ticket-popup-img {
   width: 100%;
   display: block;
   border-radius: 12px;
@@ -75,6 +75,7 @@
   bottom: 50px; /* 이미지 하단에서부터 위치 조절 */
   left: 50%;
   width: 290px;
+  height: 40px;
   transform: translateX(-50%);
   background-color: #F27370;
   color: white;

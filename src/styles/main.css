@@ -1,64 +1,48 @@
 
 .main-wrapper {
-    max-width: 1440px;
-    margin: 0 auto;
-  }
-  
-  .banner-click {
-    cursor: pointer;
-  }
-  
-  .main-banner {
-    width: 100%;
-    display: block;
-  }
-  
-  .section-title {
-    margin: 30px 0 15px;
-    padding-left: 20px;
-    font-size: 20px;
-  }
-  
-  .product-grid {
-    display: flex;
-    gap: 20px;
-    justify-content: center;
-    flex-wrap: wrap;
-    padding: 0 20px 40px;
-  }
+  max-width: 1440px;
+  margin: 0 auto;
+}
 
-  /* 파란 토너 상품링크 */
-  .product-card { 
-    position: relative;
-    cursor: pointer;
-    top: -356px;
-    left: 312px;
-    width: 170px;
-    height: 208px;
-    /* background: #ff5757; */
-    background: transparent;
-    transition: transform 0.2s;
-  }
+.banner-click {
+  cursor: pointer;
+}
 
-  .festa-banner {
-    position: absolute;
-    top: 142px; /* 원하는 위치로 조정 가능 */
-    left: 58%;
-    transform: translateX(-50%);
-    z-index: 10;
-    width: 350px; /* 필요에 따라 크기 조정 */
-  }
-  
-  .purchase{
-    position: absolute;
-    top: 82%; /* 원하는 위치에 조정 */
-    left: 28%;
-    transform: translateX(-50%);
-    background-color: #ff5757;
-    color: white;
-    padding: 8px 16px;
-    border-radius: 6px;
-    border: none;
-    cursor: pointer;
-    z-index: 10;
+.main-banner {
+  width: 100%;
+  display: block;
+}
+
+.section-title {
+  margin: 30px 0 15px;
+  padding-left: 20px;
+  font-size: 20px;
+}
+
+.product-grid {
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+  flex-wrap: wrap;
+  padding: 0 20px 40px;
+}
+
+/* 파란 토너 상품링크 */
+.product-card { 
+  position: relative;
+  cursor: pointer;
+  top: -356px;
+  left: 312px;
+  width: 170px;
+  height: 208px;
+  /* background: #ff5757; */
+  background: transparent;
+  transition: transform 0.2s;
+}
+
+.festa-banner {
+  position: absolute;
+  top: 127px; /* 화면 세로 정중앙 */
+  left: 20px; /* 화면 가로 정중앙 */
+  width: 1500px; /* 크기 확대 (원하는 사이즈로 조정 가능) */
 }
