@@ -5,8 +5,7 @@ import { useNavigate } from 'react-router-dom';
 
 export default function Product() {
   const navigate = useNavigate();
-  // const [confirmed, setConfirmed] = useState(false);
-  const [setConfirmed] = useState(false);
+  const [confirmed, setConfirmed] = useState(false);
 
   const handleConfirm = () => {
     setConfirmed(true);
