@@ -1,0 +1,41 @@
+
+.main-background {
+  position: relative;
+  width: 100%;
+  display: block;
+}
+
+.product-wrapper {
+  position: relative;
+  max-width: 1440px;
+  margin: 0 auto;
+}
+
+.product2-bg {
+  width: 100%;
+  display: block;
+}
+
+.popup-box {
+  position: absolute;
+  top: 280px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 360px;
+  background: white;
+  text-align: center;
+  padding: 24px;
+  border-radius: 12px;
+  box-shadow: 0 0 8px rgba(0,0,0,0.2);
+}
+
+.popup-box button {
+  margin-top: 12px;
+  width: 100%;
+  background: #ff7b7b;
+  color: white;
+  border: none;
+  padding: 10px;
+  border-radius: 6px;
+  cursor: pointer;
+}
