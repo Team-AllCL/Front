@@ -1,8 +1,12 @@
 
-
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 import App from './App';
+import { UserProvider } from './context/UserContext'; // 경로 맞게 조정
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
-root.render(<App />);
+root.render(
+  <UserProvider>
+    <App />
+  </UserProvider>
+);

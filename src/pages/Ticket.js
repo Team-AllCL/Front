@@ -1,15 +1,17 @@
-import React, { useState } from 'react';
+import React, { useState, useContext } from 'react';
 import { useNavigate } from 'react-router-dom';
 import '../styles/ticket.css';
+import { UserContext } from '../context/UserContext'; // 👈 context import
 
 export default function Ticket() {
   const navigate = useNavigate();
+  const { userEmail } = useContext(UserContext); // 👈 로그인한 이메일 가져오기
   const [showPopup, setShowPopup] = useState(false);
 
   const handleBuyTicket = async () => {
     const requestData = {
-      userId: 1,
-      inventoryId: 1
+      email: userEmail, // 👈 userId 대신 이메일 전달
+      ticketName: '올리브영 페스타'
     };
 
     try {
