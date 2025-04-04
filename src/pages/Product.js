@@ -1,3 +1,4 @@
+
 import React, { useContext } from 'react';
 import '../styles/product.css';
 import { useNavigate } from 'react-router-dom';
@@ -15,9 +16,7 @@ export default function Product() {
         <button className="close-btn" onClick={() => navigate('/main')}>×</button>
         <img src="/images/product.png" alt="팝업" className="popup-img" />
         <div className="popup-buttons">
-          <button
-            className="buy-btn"
-            onClick={async () => {
+          <button className="buy-btn" onClick={async () => {
               try {
                 const response = await fetch(`${process.env.REACT_APP_API_URL}/api/v1/order`, {
                   method: 'POST',
@@ -36,8 +35,7 @@ export default function Product() {
                 console.error('에러:', error);
                 alert('API 요청 중 문제가 발생했습니다.');
               }
-            }}
-          >
+            }}>
             바로 구매
           </button>
           <button className="cart-btn">장바구니</button>
