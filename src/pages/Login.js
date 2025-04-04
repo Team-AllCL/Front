@@ -17,7 +17,7 @@ export default function Login() {
           onSubmit={async (e) => {  // ⭐ async 꼭 붙여야 await 가능
             e.preventDefault();
             try {
-  		const response = await fetch('http://172.30.48.1:8080/api/v1/users/register', {
+  		const response = await fetch('http://localhost:8080/api/v1/users/register', {
     		method: 'POST',
     		headers: {
     		  'Content-Type': 'application/json',
