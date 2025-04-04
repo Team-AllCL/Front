@@ -8,7 +8,7 @@ export default function Ticket() {
 
   const handleBuyTicket = async () => {
     const requestData = {
-      
+      userId: 1,
       inventoryId: 1
     };
 
