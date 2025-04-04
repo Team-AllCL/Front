@@ -1,44 +1,48 @@
-import React, { useState } from 'react';   // ⭐ useState 추가
+import React, { useState, useContext } from 'react'; // ⭐ useContext 추가
 import '../styles/login.css';
 import { useNavigate } from 'react-router-dom';
+import { UserContext } from '../context/UserContext'; // ⭐ Context import
 
 export default function Login() {
   const navigate = useNavigate();
 
-  // ⭐ 이메일, 비밀번호 저장할 상태 추가
+  // 이메일, 비밀번호 상태
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
+
+  // ⭐ 전역 상태 업데이트 함수 가져오기
+  const { setUserEmail } = useContext(UserContext);
 
   return (
     <div className="login-wrapper">
       <img src="/images/login.png" alt="로그인 배경" className="login-bg" />
       <div className="login-box">
         <form
-          onSubmit={async (e) => {  // ⭐ async 꼭 붙여야 await 가능
+          onSubmit={async (e) => {
             e.preventDefault();
             try {
-  		const response = await fetch('http://localhost:8080/api/v1/users/register', {
-    		method: 'POST',
-    		headers: {
-    		  'Content-Type': 'application/json',
-   		 },
-   		 body: JSON.stringify({ email, password }),
- 		 });
+              // const response = await fetch('http://localhost:8080/api/v1/users/register', {
+              const response = await fetch('https://alkbwgtelky2lgukd42le7qmqi0qosvi.lambda-url.ap-northeast-2.on.aws', {
+                method: 'POST',
+                headers: {
+                  'Content-Type': 'application/json',
+                },
+                body: JSON.stringify({ email, password }),
+              });
 
-		 if (response.ok) {
-   			console.log("로그인 성공");
-    			navigate('/main');
-  		} else {
-   			alert("로그인 실패 / ID 등록");
-   			navigate('/main');
-  		}
-		} catch (error) {
-			console.error("에러 발생:", error);
-		}		
-
-          }}   // ⭐ 여기가 함수 닫는 중괄호
+              if (response.ok) {
+                setUserEmail(email); // 👈 로그인 성공 시 이메일 저장
+                console.log("로그인 성공");
+                navigate('/main');
+              } else {
+                alert("로그인 실패 / ID 등록");
+                navigate('/main');
+              }
+            } catch (error) {
+              console.error("에러 발생:", error);
+            }
+          }}
         >
-          {/* ⭐ input에 value, onChange 추가 */}
           <input 
             type="email" 
             placeholder="CJ ONE 통합회원 이메일" 
