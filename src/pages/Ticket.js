@@ -11,7 +11,7 @@ export default function Ticket() {
   const handleBuyTicket = async () => {
     const requestData = {
       email: userEmail, // 👈 userId 대신 이메일 전달
-      ticketName: '올리브영 페스타'
+      ticketName: '올리브영페스타'
     };
 
     try {
