@@ -1,4 +1,3 @@
-
 import React from 'react';
 import '../styles/product.css';
 import { useNavigate } from 'react-router-dom';
@@ -14,7 +13,6 @@ export default function Product() {
         <button className="close-btn" onClick={() => navigate('/main')}>×</button>
         <img src="/images/product.png" alt="팝업" className="popup-img" />
         <div className="popup-buttons">
-          {/* <button className="buy-btn" onClick={() => navigate('/product2')}>바로 구매</button> */}
           <button className="buy-btn" onClick={async () => {
               try {
                 const response = await fetch(`${process.env.REACT_APP_API_URL}/api/v1/order`, {
@@ -22,7 +20,7 @@ export default function Product() {
                   headers: { 'Content-Type': 'application/json' },
                   body: JSON.stringify({
                     productName: 'blue toner',
-                    userEmail: 'test@example.com',
+                    userEmail: '2@2'
                   }),
                 });
 
@@ -35,10 +33,8 @@ export default function Product() {
                 alert('API 요청 중 문제가 발생했습니다.');
               }
             }}>
-              바로 구매
-            </button>
-
-
+            바로 구매
+          </button>
 
           <button className="cart-btn">장바구니</button>
         </div>
